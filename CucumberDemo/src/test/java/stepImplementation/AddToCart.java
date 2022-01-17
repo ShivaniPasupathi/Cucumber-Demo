@@ -77,7 +77,7 @@ public class AddToCart {
     @Then("user shouldn't be logged in")
     public void userShouldnTBeLoggedIn() {
         WebElement error = driver.findElement(By.xpath(" //*[@class='woocommerce-error']//li[1]"));
-        System.out.println( error.getText())
+        System.out.println( error.getText());
         driver.quit();
     }
 }

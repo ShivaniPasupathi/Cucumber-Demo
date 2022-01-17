@@ -8,7 +8,6 @@ Feature: Testing add to cart functionality
     Then user should be taken to search result page
 
   @mandatoryTest
-
   Scenario Outline: when user searches
       Given user is in home page
       When user searches "<TypeText>"

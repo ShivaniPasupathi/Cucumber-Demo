@@ -8,7 +8,7 @@ public class DriverFactory {
     {
         if(browserType.equalsIgnoreCase("Chrome"))
         {
-            System.setProperty("webdriver.chrome.driver", "/Users/shivanip/Documents/Selenium/Drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/Users/shivanip/Documents/CucumberDemo/CucumberDemo/Drivers/chromedriver");
             return new ChromeDriver();
         }
         return null;
