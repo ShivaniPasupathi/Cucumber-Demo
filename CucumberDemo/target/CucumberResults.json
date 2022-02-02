@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-17T05:28:23.792Z",
+        "start_timestamp": "2022-02-02T08:27:19.973Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
@@ -13,54 +13,49 @@
         "steps": [
           {
             "result": {
-              "duration": 9011000000,
+              "duration": 5779000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "user opens homepage",
+            "name": "user opens Greenkart Homepage",
             "match": {
-              "location": "stepImplementation.PractiseExample.userOpensHomepage()"
+              "location": "stepImplementation.GreenCartSearch.userOpensGreenkartHomepage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 6848000000,
+              "duration": 180000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "user does many search",
+            "name": "user does a search and gets the product name",
             "match": {
-              "location": "stepImplementation.PractiseExample.userDoesManySearch(java.util.List\u003cjava.lang.String\u003e)"
+              "location": "stepImplementation.GreenCartSearch.userDoesASearch()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "shirt"
-                ]
-              },
-              {
-                "cells": [
-                  "polo"
-                ]
-              },
-              {
-                "cells": [
-                  "vneck"
-                ]
-              }
-            ],
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 138000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user goes to Top Deals and does a search",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userGetsProductNameAndGoesToTopDeals()"
+            },
+            "keyword": "And "
           },
           {
             "result": {
               "duration": 1000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user is taken to search result page",
+            "line": 11,
+            "name": "user is checks if Top deals is available",
             "match": {
-              "location": "stepImplementation.PractiseExample.userIsTakenToSearchResultPage()"
+              "location": "stepImplementation.GreenCartSearch.userIsChecksIfTopDealsIsAvailable()"
             },
             "keyword": "Then "
           }
@@ -76,7 +71,7 @@
     "description": "",
     "id": "practising-cucumber",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/practise.feature",
+    "uri": "file:src/test/java/features/GreenCart.feature",
     "tags": []
   }
 ]
