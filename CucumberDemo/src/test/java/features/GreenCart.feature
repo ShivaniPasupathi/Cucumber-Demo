@@ -7,5 +7,5 @@ Feature: Practising cucumber
     #|Cucumber|
     #|Potato |
     #|Tomato|
-    And user goes to Top Deals and does a search
-    Then user is checks if Top deals is available
+    And user goes to Top Deals and does a search "Tomato"
+    Then user is checks if Top deals is available for searched product

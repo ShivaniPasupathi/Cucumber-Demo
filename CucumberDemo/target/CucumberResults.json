@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-02T08:27:19.973Z",
+        "start_timestamp": "2022-02-04T07:46:27.221Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5779000000,
+              "duration": 5855000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 180000000,
+              "duration": 1197000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,25 +37,31 @@
           },
           {
             "result": {
-              "duration": 138000000,
+              "duration": 1386000000,
               "status": "passed"
             },
             "line": 10,
-            "name": "user goes to Top Deals and does a search",
+            "name": "user goes to Top Deals and does a search \"Tomato\"",
             "match": {
-              "location": "stepImplementation.GreenCartSearch.userGetsProductNameAndGoesToTopDeals()"
+              "arguments": [
+                {
+                  "val": "\"Tomato\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepImplementation.GreenCartSearch.userGetsProductNameAndGoesToTopDeals(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 3000000,
               "status": "passed"
             },
             "line": 11,
-            "name": "user is checks if Top deals is available",
+            "name": "user is checks if Top deals is available for searched product",
             "match": {
-              "location": "stepImplementation.GreenCartSearch.userIsChecksIfTopDealsIsAvailable()"
+              "location": "stepImplementation.GreenCartSearch.userIsChecksIfTopDealsIsAvailableForSearchedProduct()"
             },
             "keyword": "Then "
           }
