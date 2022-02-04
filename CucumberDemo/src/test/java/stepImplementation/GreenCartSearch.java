@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -18,6 +19,8 @@ public class GreenCartSearch {
     WebDriver driver;
     public String topDealsSearch;
     public String confirmation;
+    public Set<String> products = new HashSet<String>();
+
 
     @Given("user opens Greenkart Homepage")
     public void userOpensGreenkartHomepage() {
@@ -57,19 +60,28 @@ public class GreenCartSearch {
     }
 
 
-//
-//    @When("user does many search")
-//    public void userDoesManySearch(List<String> searchText) throws InterruptedException {
-//        int size = searchText.size();
-//        for (int i = 0; i < size; i++) {
-//            WebElement search = driver.findElement(By.xpath("//*[@class='search-keyword']"));
-//            search.sendKeys(searchText.get(i));
-//            search.sendKeys(Keys.ENTER);
-//            search.clear();
-//
-//        }
-//
-//    }
+
+    @When("user does many search")
+    public void userDoesManySearch(List<String> searchText) throws InterruptedException {
+        int size = searchText.size();
+        for (int i = 0; i < size; i++) {
+            WebElement search = driver.findElement(By.xpath("//*[@class='search-keyword']"));
+            search.sendKeys(searchText.get(i));
+            search.sendKeys(Keys.ENTER);
+            Thread.sleep(1000);
+            products.add(confirmation = driver.findElement(By.xpath("//h4[@class ='product-name']")).getText().split("-")[0].trim());
+            search.clear();
+
+        }
+
+    }
 
 
+    @And("user gets results")
+    public void userGetsResults() {
+        for(String product:products)
+        {
+            System.out.println(product);
+        }
+    }
 }

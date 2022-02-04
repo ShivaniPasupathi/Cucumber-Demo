@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-04T07:46:27.221Z",
+        "start_timestamp": "2022-02-04T08:33:57.015Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5855000000,
+              "duration": 5880000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1197000000,
+              "duration": 1181000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,10 +37,10 @@
           },
           {
             "result": {
-              "duration": 1386000000,
+              "duration": 1404000000,
               "status": "passed"
             },
-            "line": 10,
+            "line": 6,
             "name": "user goes to Top Deals and does a search \"Tomato\"",
             "match": {
               "arguments": [
@@ -55,10 +55,10 @@
           },
           {
             "result": {
-              "duration": 3000000,
+              "duration": 2000000,
               "status": "passed"
             },
-            "line": 11,
+            "line": 7,
             "name": "user is checks if Top deals is available for searched product",
             "match": {
               "location": "stepImplementation.GreenCartSearch.userIsChecksIfTopDealsIsAvailableForSearchedProduct()"
@@ -69,6 +69,69 @@
         "tags": [
           {
             "name": "@practise"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-04T08:34:05.569Z",
+        "line": 9,
+        "name": "When user does multiple search",
+        "description": "",
+        "id": "practising-cucumber;when-user-does-multiple-search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5699000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user opens Greenkart Homepage",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userOpensGreenkartHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3537000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user does many search",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userDoesManySearch(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Cucumber"
+                ]
+              },
+              {
+                "cells": [
+                  "Potato"
+                ]
+              },
+              {
+                "cells": [
+                  "Tomato"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user gets results",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userGetsResults()"
+            },
+            "keyword": "And "
           }
         ]
       }
