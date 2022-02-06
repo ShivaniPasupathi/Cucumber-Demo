@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
+
+    public WebDriver driver;
+    public String confirmation;
     public static WebDriver open(String browserType)
     {
         if(browserType.equalsIgnoreCase("Chrome"))
