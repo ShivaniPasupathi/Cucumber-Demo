@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-06T14:52:42.653Z",
+        "start_timestamp": "2022-02-07T05:09:58.685Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7022000000,
+              "duration": 5255000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1174000000,
+              "duration": 1168000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 1360000000,
+              "duration": 1402000000,
               "status": "passed"
             },
             "line": 6,
@@ -68,7 +68,75 @@
         ],
         "tags": [
           {
-            "name": "@practise"
+            "name": "@singleSearch"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-07T05:10:06.615Z",
+        "line": 10,
+        "name": "When user does multiple search",
+        "description": "",
+        "id": "practising-cucumber;when-user-does-multiple-search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4345000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user opens Greenkart Homepage",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userOpensGreenkartHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3480000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user does many search",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userDoesManySearch(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Cucumber"
+                ]
+              },
+              {
+                "cells": [
+                  "Potato"
+                ]
+              },
+              {
+                "cells": [
+                  "Tomato"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user gets results",
+            "match": {
+              "location": "stepImplementation.GreenCartSearch.userGetsResults()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@multipleSearch"
           }
         ]
       }
