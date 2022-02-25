@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-07T05:09:58.685Z",
+        "start_timestamp": "2022-02-25T10:02:29.956Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5255000000,
+              "duration": 11998000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1168000000,
+              "duration": 1177000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 1402000000,
+              "duration": 1386000000,
               "status": "passed"
             },
             "line": 6,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 3000000,
+              "duration": 2000000,
               "status": "passed"
             },
             "line": 7,
@@ -73,7 +73,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-02-07T05:10:06.615Z",
+        "start_timestamp": "2022-02-25T10:02:44.616Z",
         "line": 10,
         "name": "When user does multiple search",
         "description": "",
@@ -83,7 +83,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4345000000,
+              "duration": 5348000000,
               "status": "passed"
             },
             "line": 11,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 3480000000,
+              "duration": 3409000000,
               "status": "passed"
             },
             "line": 12,

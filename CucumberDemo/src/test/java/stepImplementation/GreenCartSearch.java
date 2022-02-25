@@ -3,9 +3,7 @@ package stepImplementation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+
 import pageObject.GreenCartSearchPO;
 import utilities.DriverFactory;
 
@@ -18,12 +16,11 @@ public class GreenCartSearch {
     public String confirmation;
     public Set<String> products = new HashSet<String>();
 
-    public GreenCartSearch(DriverFactory driverFactory) // Dependency Injection driver and confirmation can be accessed by any class now.
+
+    public GreenCartSearch(DriverFactory driverFactory) // Dependency Injection -> driver and confirmation can be accessed by any class now.
     {
         this.driverFactory=driverFactory;
     }
-
-
 
     @Given("user opens Greenkart Homepage")
     public void userOpensGreenkartHomepage() {
@@ -32,29 +29,25 @@ public class GreenCartSearch {
     }
     @When("user does a search and gets the product name")
     public void userDoesASearch() throws InterruptedException {
-        GreenCartSearchPO greenCartSearchPO = new GreenCartSearchPO(driverFactory.driver);
+        GreenCartSearchPO greenCartSearchPO = driverFactory.pageObjectManager.getGreenCartPage();
         greenCartSearchPO.searchItem("Tomato");
         Thread.sleep(1000);
-        driverFactory.confirmation = driverFactory.driver.findElement(By.xpath("//h4[@class ='product-name']")).getText().split("-")[0].trim();
+        driverFactory.confirmation = greenCartSearchPO.getProductName();
         System.out.println(confirmation);
     }
 
-
     @When("user does many search")
     public void userDoesManySearch(List<String> searchText) throws InterruptedException {
+        GreenCartSearchPO greenCartSearchPO = driverFactory.pageObjectManager.greenCartSearchPO;
         int size = searchText.size();
         for (int i = 0; i < size; i++) {
-            WebElement search = driverFactory.driver.findElement(By.xpath("//*[@class='search-keyword']"));
-            search.sendKeys(searchText.get(i));
-            search.sendKeys(Keys.ENTER);
+            greenCartSearchPO.searchItem(searchText.get(i));
             Thread.sleep(1000);
-            products.add(driverFactory.confirmation = driverFactory.driver.findElement(By.xpath("//h4[@class ='product-name']")).getText().split("-")[0].trim());
-            search.clear();
-
+            products.add(driverFactory.confirmation = greenCartSearchPO.getProductName());
+            greenCartSearchPO.clearSearch();
         }
 
     }
-
 
     @And("user gets results")
     public void userGetsResults() {
