@@ -16,7 +16,7 @@ public class AddToCart {
     @Given("^user is in home page$")
     public void user_is_in_home_page()
     {
-        driver=utilities.DriverFactory.open("chrome");
+        driver=utilities.InitialiseDriverAddToCart.open("chrome");
         driver.get("https://www.edgewordstraining.co.uk/demo-site/my-account/");
     }
 
