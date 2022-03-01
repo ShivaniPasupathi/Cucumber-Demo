@@ -2,17 +2,33 @@ package stepImplementation;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.messages.Messages;
+import org.openqa.selenium.WebDriver;
+import utilities.UtilitySetUp;
+
+import java.io.IOException;
 
 public class HookExample {
-    @Before("@mandatoryTest")
-    public void beforeMandatoryTest()
+   public UtilitySetUp utilitySetUp;
+//    @Before("@mandatoryTest")
+//    public void beforeMandatoryTest()
+//    {
+//        System.out.println("Before");
+//    }
+//
+//    @After("@mandatoryTest")
+//    public void afterMandatoryTest()
+//    {
+//        System.out.println("after");
+//    }
+
+    public HookExample(UtilitySetUp utilitySetUp)
     {
-        System.out.println("Before");
+        this.utilitySetUp=utilitySetUp;
     }
 
-    @After("@mandatoryTest")
-    public void afterMandatoryTest()
-    {
-        System.out.println("after");
+    @After
+    public void afterScenariosExecution() throws IOException {
+        utilitySetUp.driverFactory.open().quit();
     }
 }

@@ -1,8 +1,6 @@
 package pageObject;
 
 import org.openqa.selenium.WebDriver;
-import stepImplementation.GreenCartSearch;
-import stepImplementation.TopDealsPage;
 
 // Factory design pattern
 public class PageObjectManager {

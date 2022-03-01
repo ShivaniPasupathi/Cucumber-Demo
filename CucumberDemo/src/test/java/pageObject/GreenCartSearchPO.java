@@ -18,16 +18,18 @@ public class GreenCartSearchPO {
     public void searchItem(String searchTerm)
     {
         driver.findElement(search).sendKeys(searchTerm);
-
     }
+
     public String getProductName()
     {
         return driver.findElement(confirmation).getText().split("-")[0].trim();
     }
+
     public void clickTopDeals()
     {
         driver.findElement(topDealsPage).click();
     }
+
     public void clearSearch()
     {
         driver.findElement(search).clear();

@@ -3,18 +3,14 @@ package stepImplementation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-
 import pageObject.GreenCartSearchPO;
-
 import utilities.UtilitySetUp;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class GreenCartSearch {
     public UtilitySetUp utilitySetUp;
-    public String confirmation;
     public Set<String> products = new HashSet<>();
 
 
@@ -33,12 +29,12 @@ public class GreenCartSearch {
         greenCartSearchPO.searchItem("Tomato");
         Thread.sleep(1000);
         utilitySetUp.confirmation = greenCartSearchPO.getProductName();
-        System.out.println(confirmation);
+        System.out.println(utilitySetUp.confirmation);
     }
 
     @When("user does many search")
     public void userDoesManySearch(List<String> searchText) throws InterruptedException {
-        GreenCartSearchPO greenCartSearchPO = utilitySetUp.pageObjectManager.greenCartSearchPO;
+        GreenCartSearchPO greenCartSearchPO = utilitySetUp.pageObjectManager.getGreenCartPage();
         int size = searchText.size();
         for (int i = 0; i < size; i++) {
             greenCartSearchPO.searchItem(searchText.get(i));

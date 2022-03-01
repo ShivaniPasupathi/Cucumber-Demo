@@ -3,17 +3,28 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-25T10:02:29.956Z",
+        "start_timestamp": "2022-03-01T14:04:12.555Z",
         "line": 3,
         "name": "When user does a search",
         "description": "",
         "id": "practising-cucumber;when-user-does-a-search",
+        "after": [
+          {
+            "result": {
+              "duration": 1102000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepImplementation.HookExample.afterScenariosExecution()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 11998000000,
+              "duration": 8176000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 1177000000,
+              "duration": 1167000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 1386000000,
+              "duration": 1359000000,
               "status": "passed"
             },
             "line": 6,
@@ -73,17 +84,28 @@
         ]
       },
       {
-        "start_timestamp": "2022-02-25T10:02:44.616Z",
+        "start_timestamp": "2022-03-01T14:04:24.438Z",
         "line": 10,
         "name": "When user does multiple search",
         "description": "",
         "id": "practising-cucumber;when-user-does-multiple-search",
+        "after": [
+          {
+            "result": {
+              "duration": 1102000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepImplementation.HookExample.afterScenariosExecution()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5348000000,
+              "duration": 15689000000,
               "status": "passed"
             },
             "line": 11,
@@ -95,7 +117,7 @@
           },
           {
             "result": {
-              "duration": 3409000000,
+              "duration": 3417000000,
               "status": "passed"
             },
             "line": 12,

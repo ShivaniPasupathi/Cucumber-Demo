@@ -3,21 +3,16 @@ package stepImplementation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pageObject.GreenCartSearchPO;
 import pageObject.PageObjectManager;
 import pageObject.TopDealsPagePO;
-import utilities.DriverFactory;
 import utilities.UtilitySetUp;
 
-import java.util.Iterator;
-import java.util.Set;
 
 public class TopDealsPage {
     public UtilitySetUp utilitySetUp;
     public String topDealsSearch;
-    public PageObjectManager pageObjectManager;
+  //  public PageObjectManager pageObjectManager;
     public TopDealsPage(UtilitySetUp utilitySetUp)
     {
         this.utilitySetUp=utilitySetUp;
@@ -43,13 +38,10 @@ public class TopDealsPage {
     public void switchWindow() //loosely coupled -> single responsible principle and separation of concerns
     {
        // GreenCartSearchPO greenCartSearchPO = new GreenCartSearchPO(utilitySetUp.driver); // use factory design pattern instead of creating object each time inside a method.
-      //  pageObjectManager = new PageObjectManager(utilitySetUp.driver); instead of creating object here create it in driver Factory class
+      //  pageObjectManager = new PageObjectManager(utilitySetUp.driver); instead of creating object here create it in Utility set up class
         GreenCartSearchPO greenCartSearchPO= utilitySetUp.pageObjectManager.getGreenCartPage();
         greenCartSearchPO.clickTopDeals();
-        Set<String> window= utilitySetUp.driver.getWindowHandles();
-        Iterator<String> itr=window.iterator();
-        String parentWindow = itr.next();
-        String childWindow1 = itr.next();
-        utilitySetUp.driver.switchTo().window(childWindow1);
+        utilitySetUp.genericUtils.switchWindow();
+
     }
 }
